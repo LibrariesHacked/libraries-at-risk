@@ -1,0 +1,31 @@
+*:not(i):not(.fa) {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#div-library-hexmap {
+  height: 700px;
+  width: 100%;
+}
+
+#btn-sign {
+  display: inline-block;
+  margin: 10px;
+  text-transform: none;
+  font-weight: bolder;
+}
+
+.hex-cell {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.hex-label {
+  fill: #2d7700 !important;
+  font-weight: bolder;
+}
+
+.popup-title {
+  font-weight: bolder;
+  font-size: 1.2em;
+}

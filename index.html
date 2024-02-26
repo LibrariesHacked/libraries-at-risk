@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Libraries at risk</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Public library services who have are currently at risk"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@ajusa/lit@1.1.0/dist/lit.css"
+    />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <div class="c">
+      <div>
+        <h1 class="success">Libraries at risk</h1>
+      </div>
+
+      <p class="subtitle">
+        These are the public library services who have been listed as at risk in
+        CILIP's public libraries at risk monitor.
+      </p>
+
+      <p>
+        <a
+          id="btn-sign"
+          class="btn"
+          href="https://www.cilip.org.uk/page/libraries-at-risk"
+          target="_blank"
+          >Go to the Public Libraries at Risk monitor</a
+        >
+      </p>
+
+      <p class="subtitle" id="p-data-loading">
+        Please wait while data loads...
+      </p>
+
+      <div id="div-library-hexmap"></div>
+
+      <hr />
+      <div id="wcb" class="carbonbadge"></div>
+      <script
+        src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+        defer
+      ></script>
+    </div>
+
+    <script src="js/uDSV.iife.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <script src="js/oi.hexmap.min.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
