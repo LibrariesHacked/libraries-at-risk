@@ -74,6 +74,9 @@ const buildHexMap = () => {
 
       hexdata.hexes[hexCode].colour = colour
       hexdata.hexes[hexCode].letter = letter
+      hexdata.hexes[hexCode].status = atRiskData && atRiskData.status
+        ? atRiskData.status
+        : 'No current information'
     }
   })
 
@@ -85,7 +88,7 @@ const buildHexMap = () => {
         const service = attr.hex.n
         const letter = attr.hex.letter
 
-        var data_attrs = `data-service="${service}"`
+        var data_attrs = `data-service="${service}" data-status="${attr.hex.status}"`
 
         return `<tspan ${data_attrs} class="hexdata">${letter}</tspan>`
       }
@@ -97,13 +100,8 @@ const buildHexMap = () => {
     trigger: 'click',
     content: reference => {
       var span = reference.querySelector('.hexdata')
-      if (span && span.dataset.green) {
-        var greenLibrary = span.dataset.green === 'true'
-        var service = span.dataset.service
-
-        var greenPopup = `<div class="popup"><span class="popup-title">${service}</span><br/>Signed up</div>`
-        var nonGreenPopup = `<div class="popup"><span class="popup-title">${service}</span><br/>Not yet signed up</div>`
-        return greenLibrary ? greenPopup : nonGreenPopup
+      if (span && span.dataset) {
+        return `<div class="popup"><span class="popup-title">${span.dataset.service}</span><br/>${span.dataset.status}</div>`
       }
       return null
     },

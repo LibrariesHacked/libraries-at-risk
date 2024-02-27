@@ -21,11 +21,36 @@
 }
 
 .hex-label {
-  fill: #2d7700 !important;
   font-weight: bolder;
 }
 
 .popup-title {
   font-weight: bolder;
   font-size: 1.2em;
+}
+
+.proposed {
+  background-color: #fa8c00;
+}
+
+.cilip {
+  background-color: #09bb9f;
+}
+
+.cilips {
+  background-color: #f6d500;
+}
+
+.keyhex {
+  -webkit-clip-path: polygon(
+    50% 0%,
+    95% 25%,
+    95% 75%,
+    50% 100%,
+    5% 75%,
+    5% 25%
+  );
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  padding: 7px 10px;
+  font-weight: bolder;
 }
